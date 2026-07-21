@@ -44,4 +44,4 @@ ENV PYTHONPATH=/app
 EXPOSE 8000
 
 # Execute server using Gunicorn + Uvicorn worker threads
-CMD ["gunicorn", "-w", "4", "-k", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:8000", "app.main:app"]
+CMD ["gunicorn", "-w", "1", "-k", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:8000", "app.main:app"]
