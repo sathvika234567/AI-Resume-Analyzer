@@ -12,13 +12,6 @@ from app.routes import auth, resumes, analysis, dashboard
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Auto-download spaCy model on startup if not available
-try:
-    spacy.load("en_core_web_sm")
-    logger.info("spaCy model 'en_core_web_sm' is already installed.")
-except OSError:
-    logger.info("spaCy model 'en_core_web_sm' not found. Downloading...")
-    subprocess.run(["python3", "-m", "spacy", "download", "en_core_web_sm"], check=True)
 
 # Initialize database schemas
 try:
