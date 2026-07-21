@@ -6,7 +6,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from database.connection import engine, Base
-from backend.app.routes import auth, resumes, analysis, dashboard
+from app.routes import auth, resumes, analysis, dashboard
 
 # Configure logger
 logging.basicConfig(level=logging.INFO)
