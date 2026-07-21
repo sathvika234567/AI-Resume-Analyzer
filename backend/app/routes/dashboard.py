@@ -4,8 +4,8 @@ from collections import Counter
 
 from database.connection import get_db
 from database.models import Resume, Analysis, User
-from backend.app.auth import get_current_user
-from backend.app.schemas import DashboardStatsResponse
+from app.auth import get_current_user
+from app.schemas import DashboardStatsResponse
 
 router = APIRouter(prefix="/dashboard", tags=["Dashboard"])
 

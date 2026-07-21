@@ -4,8 +4,8 @@ from sqlalchemy.orm import Session
 
 from database.connection import get_db
 from database.models import Resume, Analysis, User
-from backend.app.auth import get_current_user
-from backend.app.schemas import AnalysisCreate, AnalysisResponse
+from app.auth import get_current_user
+from app.schemas import AnalysisCreate, AnalysisResponse
 from ml.scoring import compute_hybrid_ats_score
 from ml.suggestions import generate_local_suggestions, generate_llm_suggestions
 

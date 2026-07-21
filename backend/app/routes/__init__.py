@@ -1,1 +1,1 @@
-from backend.app.routes import auth, resumes, analysis, dashboard
+from app.routes import auth, resumes, analysis, dashboard

@@ -6,8 +6,8 @@ from sqlalchemy.orm import Session
 
 from database.connection import get_db
 from database.models import Resume, User
-from backend.app.auth import get_current_user
-from backend.app.schemas import ResumeResponse
+from app.auth import get_current_user
+from app.schemas import ResumeResponse
 from ml.ocr import extract_text_from_pdf
 from ml.parser import parse_resume_text
 
