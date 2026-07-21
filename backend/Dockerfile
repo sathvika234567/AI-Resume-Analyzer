@@ -27,6 +27,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY --from=builder /root/.local /root/.local
 ENV PATH=/root/.local/bin:$PATH
 
+RUN python -m spacy download en_core_web_sm
+
 # Copy application layers
 COPY database /app/database
 COPY ml /app/ml

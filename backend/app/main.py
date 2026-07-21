@@ -1,7 +1,5 @@
 import os
-import spacy
 import logging
-import subprocess
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
