@@ -26,21 +26,7 @@ def get_transformer_model():
     return model
 
 def calculate_sentence_transformers_similarity(resume_text: str, jd_text: str) -> float:
-    """
-    Computes cosine similarity of Sentence Transformer embeddings.
-    """
-    transformer = get_transformer_model()
-    if not transformer:
-        return 0.0  # Fallback to TF-IDF score
-        
-    try:
-        embeddings = transformer.encode([resume_text, jd_text])
-        # Calculate Cosine Similarity
-        similarity = cosine_similarity([embeddings[0]], [embeddings[1]])[0][0]
-        return float(max(0.0, min(1.0, similarity)))
-    except Exception as e:
-        logger.error(f"Error computing transformer similarity: {e}")
-        return 0.0
+    return 0.0
 
 def calculate_tfidf_similarity(resume_text: str, jd_text: str) -> float:
     """
